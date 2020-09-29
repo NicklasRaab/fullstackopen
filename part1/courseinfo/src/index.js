@@ -1,17 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+  const course = 'Half Stack application development'
+  const part1 = 'Fundamentals of React'
+  const exersice1 = 10
+  const part2 = 'Using props to pass data'
+  const exersice2 = 7
+  const part3 = 'State of a component'
+  const exersice3 = 14
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  return (
+    <div>
+      <h1>{course}</h1>
+      <p>
+        {part1} {exersice1}
+      </p>
+      <p>
+        {part2} {exersice2}
+      </p>
+      <p>
+        {part3} {exersice3}
+      </p>
+      <p>Number of exersices {exersice1 + exersice2 + exersice3}</p>
+    </div>
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
